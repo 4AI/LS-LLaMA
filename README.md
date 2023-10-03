@@ -1,5 +1,8 @@
 # LS-LLaMA: Label Supervised LLaMA Finetuning
 
+<p align='center'>
+<img src='./docs/lsllama.png'/>
+</p>
 
 ## Usage
 
