@@ -1,5 +1,4 @@
-# LS-LLaMA
-LABEL SUPERVISED LLAMA FINETUNING
+# LS-LLaMA: Label Supervised LLaMA Finetuning
 
 
 ## Usage
