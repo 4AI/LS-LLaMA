@@ -1,5 +1,13 @@
 # LS-LLaMA: Label Supervised LLaMA Finetuning
 
+<p align="center">
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/label-supervised-llama-finetuning/named-entity-recognition-on-conll03-4)](https://paperswithcode.com/sota/named-entity-recognition-on-conll03-4?p=label-supervised-llama-finetuning)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/label-supervised-llama-finetuning/named-entity-recognition-on-ontonotes-5-0-1)](https://paperswithcode.com/sota/named-entity-recognition-on-ontonotes-5-0-1?p=label-supervised-llama-finetuning)
+</p>
+
+
 <p align='center'>
 <img src='./docs/lsllama.png'/>
 </p>
