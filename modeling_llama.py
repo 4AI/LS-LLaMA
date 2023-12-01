@@ -75,12 +75,15 @@ class UnmaskingLlamaModel(LlamaPreTrainedModel):
         # [bsz, seq_len] -> [bsz, 1, tgt_seq_len, src_seq_len]
         combined_attention_mask = None
         if input_shape[-1] > 1:
+            '''
             combined_attention_mask = _make_causal_mask(
                 input_shape,
                 inputs_embeds.dtype,
                 device=inputs_embeds.device,
                 past_key_values_length=past_key_values_length,
             )
+            '''
+            combined_attention_mask = torch.zeros((input_shape[0], 1, input_shape[-1], input_shape[-1])).to(inputs_embeds.device)
         if attention_mask is not None:
             # [bsz, seq_len] -> [bsz, 1, tgt_seq_len, src_seq_len]
             expanded_attn_mask = _expand_mask(attention_mask, inputs_embeds.dtype, tgt_len=input_shape[-1]).to(
