@@ -14,6 +14,31 @@
 
 ## Usage
 
+Our implementation currently supports the following sequence classification benchmarks: 
+1. SST2 (2 classes) / SST5 (5 classes)
+2. AGNews (4 classes)
+3. Twitter Financial News Sentiment (twitterfin, 3 classes)
+
+amd token classification benchmarks for named entity recognition (NER): CoNLL2003 and OntonotesV5.
+
+Commands for training LS-LLaMA and LS-unLLaMA on different tasks can follow the templates below:
+```console
+foo@bar:~$ CUDA_VISIBLE_DEVICES=0 python file_name.py dataset_name model_size
+```
+
+`file_name.py` can be one of `unllama_seq_clf.py`, `unllama_token_clf.py`, `llama_seq_clf.py`, and `llama_token_clf.py`, for training LS-LLaMA and LS-unLLaMA on sequence- and token-level classification.
+
+`dataset_name` can be one of `sst2`, `sst5`, `agnews`, `twitterfin`, `conll03`, and `ontonotesv5`.
+
+`model_size` can be `7b` or `13b`, corresponding to LLaMA-2-7B and LLaMA-2-13B.
+
+For example, the following command will train LS-unLLaMA based on LLaMA-2-7B on AGNews for sequence classification:
+```console
+foo@bar:~$ CUDA_VISIBLE_DEVICES=0 python unllama_seq_clf.py agnews 7b
+```
+
+## Implementations
+
 Load Pretrained Models
 
 ```python
@@ -32,4 +57,4 @@ model = UnmaskingLlamaForSequenceClassification.from_pretrained(model_id).bfloat
 model = UnmaskingLlamaForTokenClassification.from_pretrained(model_id).bfloat16()
 ```
 
-More usage please refer to `unllama_seq_clf.py`, `unllama_token_clf.py`, `llama_seq_clf.py`, `llama_token_clf.py`.
+For more usage, please refer to `unllama_seq_clf.py`, `unllama_token_clf.py`, `llama_seq_clf.py`, `llama_token_clf.py`.
