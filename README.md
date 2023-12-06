@@ -19,7 +19,7 @@ Our implementation currently supports the following sequence classification benc
 2. AGNews (4 classes)
 3. Twitter Financial News Sentiment (twitterfin, 3 classes)
 
-amd token classification benchmarks for named entity recognition (NER): CoNLL2003 and OntonotesV5.
+and token classification benchmarks for named entity recognition (NER): CoNLL2003 and OntonotesV5.
 
 Commands for training LS-LLaMA and LS-unLLaMA on different tasks can follow the templates below:
 ```console
