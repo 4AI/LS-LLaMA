@@ -58,3 +58,14 @@ model = UnmaskingLlamaForTokenClassification.from_pretrained(model_id).bfloat16(
 ```
 
 For more usage, please refer to `unllama_seq_clf.py`, `unllama_token_clf.py`, `llama_seq_clf.py`, `llama_token_clf.py`.
+
+# Citation
+
+```
+@article{li2023label,
+  title={Label supervised llama finetuning},
+  author={Li, Zongxi and Li, Xianming and Liu, Yuzhang and Xie, Haoran and Li, Jing and Wang, Fu-lee and Li, Qing and Zhong, Xiaoqin},
+  journal={arXiv preprint arXiv:2310.01208},
+  year={2023}
+}
+```
