@@ -23,6 +23,16 @@ def load_ontonotesv5():
         ret[split_name] = Dataset.from_list(data)
     return DatasetDict(ret)
 
+def load_CI():
+    ret = {}
+    for split_name in ['train_large', 'test_large']:
+        data = []
+        with open(f'./data/CI/{split_name}.jsonl', 'r') as reader:
+            for line in reader:
+                data.append(json.loads(line))
+        ret[split_name] = Dataset.from_list(data)
+    return DatasetDict(ret)
+
 
 if len(sys.argv) != 3:
     print('usage python %.py task model_size')
@@ -53,6 +63,9 @@ elif task == 'conll2003':
 elif task == 'ontonotesv5':
     ds = load_ontonotesv5()
     label2id = {'O': 0, 'B-NORP': 1, 'B-PERSON': 2, 'B-WORK_OF_ART': 3, 'B-QUANTITY': 4, 'B-EVENT': 5, 'B-DATE': 6, 'B-TIME': 7, 'B-PERCENT': 8, 'B-LANGUAGE': 9, 'B-ORG': 10, 'B-CARDINAL': 11, 'B-LAW': 12, 'B-GPE': 13, 'B-PRODUCT': 14, 'B-LOC': 15, 'B-MONEY': 16, 'B-ORDINAL': 17, 'B-FAC': 18}
+elif task == 'CI':
+    ds = load_CI()
+    label2id = {'B-O': 0, 'B-TP': 1, 'B-ATTRIBUTE': 2, 'B-SENDER': 3, 'B-RECEIVER': 4, 'B-SUBJECT': 5}
 else:
     raise NotImplementedError
 id2label = {v: k for k, v in label2id.items()}
