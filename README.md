@@ -1,5 +1,7 @@
 # LS-LLaMA: Label Supervised LLaMA Finetuning
 
+<h2>📢: For convenience, we build a bi-directional LLMs toolkit <a href='https://github.com/WhereIsAI/BiLLM'>BiLLM</a> for language understanding. Welcome to use it.</h2>
+
 <p align="center">
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/label-supervised-llama-finetuning/named-entity-recognition-on-conll03-4)](https://paperswithcode.com/sota/named-entity-recognition-on-conll03-4?p=label-supervised-llama-finetuning)
